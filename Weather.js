@@ -39,7 +39,7 @@ const weatherOptions = {
         iconName: "weather-cloudy",
         gradient: ["#d7d2cc", "#304352"],
         title: "Clouds",
-        subtitle: "Cloud nine"
+        subtitle: "Where is my sum"
     },
     Haze: {
         iconName: "weather-fog",
