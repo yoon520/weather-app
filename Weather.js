@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -39,7 +39,7 @@ const weatherOptions = {
         iconName: "weather-cloudy",
         gradient: ["#d7d2cc", "#304352"],
         title: "Clouds",
-        subtitle: "Where is my sum"
+        subtitle: "Where is my SUN?"
     },
     Haze: {
         iconName: "weather-fog",
@@ -71,8 +71,7 @@ export default function Weather({ temp, condition }){
         <MaterialCommunityIcons 
           size={96}
           name={weatherOptions[condition].iconName}
-          color="white"
-        />
+          color="white"/>
         <Text style={styles.temp}>{temp}ºC</Text>
       </View>
       <View style = {{...styles.halfcontainer, ...styles.textContainer}}>
@@ -83,9 +82,9 @@ export default function Weather({ temp, condition }){
   );
 }
 
-Weather.propTypes = {
-    temp: propTypes.number.isRequired,
-    condition: propTypes.oneOf([
+Weather.PropTypes = {
+    temp: PropTypes.number.isRequired,
+    condition: PropTypes.oneOf([
         "Thunderstorm",
         "Drizzle",
         "Rain",
@@ -117,11 +116,13 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 44,
         fontWeight: "300",
-        marginBottom: 10
+        marginBottom: 10,
+        textAlign: "left"
     },
     subtitle: {
         color: "white",
-        fontSize: 24
+        fontSize: 24,
+        textAlign: "left"
     },
     textContainer: {
         paddingHorizontal: 20,
