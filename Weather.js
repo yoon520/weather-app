@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -82,9 +82,9 @@ export default function Weather({ temp, condition }){
   );
 }
 
-Weather.PropTypes = {
-    temp: PropTypes.number.isRequired,
-    condition: PropTypes.oneOf([
+Weather.propTypes = {
+    temp: propTypes.number.isRequired,
+    condition: propTypes.oneOf([
         "Thunderstorm",
         "Drizzle",
         "Rain",
